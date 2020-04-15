@@ -13,9 +13,11 @@
                     {% for item in all_items %}
                         <li class="list-group-item  border-button-0 border-right-0 border-top-2 border-left-0 col-12">
                             <div class="form-inline">
-                                <h5 class="col-lg-10 col-sm-8 "> {{item.question}}</h5>
-                                <a href="{% url 'vote' item.id %}" class="btn btn-info mr-1 btn-sm active" role="button">Vote</a>
-                                <a href="{% url 'results' item.id %}" class="btn btn-secondary ml-3 btn-sm active" role="button">View Results</a>
+                                <p class="col ">
+                                    {{item.question}}
+                                </p>
+                                <a href="{% url 'vote' item.id %}" class="btn btn-info  btn-sm active" role="button">Vote</a>
+                                <a href="{% url 'results' item.id %}" class="btn btn-secondary ml-1 btn-sm active" role="button">View Results</a>
                             </div>
                         </li>
                     {% endfor %}
