@@ -1,0 +1,61 @@
+{% extends "pollapp/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Vote{% endblock %}
+
+{% block main %}
+
+    <div class="card">
+        <div class="card-header">
+            <h5> Cast Your Vote</h5>
+        </div>
+       <div class="card-body">
+         <div class="row">
+           <div class="col-12">
+             <div class="form-group">
+               <h2>{{ poll.question }}</h2>
+             </div>
+           </div>
+         </div>
+         <form method="post">
+             {% csrf_token %}
+             <div class="row">
+               <div class="col-4">
+                 <div class="form-group">
+                     <div class="row-2">
+                       <label >
+                          <input type="radio" name="poll" value="result_option1" required>
+                          {{ poll.option_one }}
+                       </label>
+                     </div>
+                     <div class="row-2">
+                        <label>
+                            <input type="radio" name="poll" value="result_option2" required>
+                            {{ poll.option_two }}
+                        </label>
+                     </div>
+                     <div class="row-2">
+                        <label>
+                            <input type="radio" name="poll" value="result_option3" required>
+                            {{ poll.option_three }}
+                        </label>
+                     </div>
+                 </div>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-12">
+                 <button type="submit" class="btn btn-info" >Submit Vote</button>
+               </div>
+             </div>
+         </form>
+       </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+

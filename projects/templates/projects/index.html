@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title> All Projects </title>
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+  </head>
+
+  <body>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Welcome To My Page</h1>
+      <p class="lead text-muted">Hey all, this is my project's page, here you can see all the projects I have done. Feel free to contact me if you have some feedback or any other reasons.</p>
+      <p>
+        <a href="mailto:benist617@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <a href="https://www.linkedin.com/in/ben-istaharov/" class="btn btn-info my-2">LinkedIn Page</a>
+        <a href="{% static 'cv_Ben.pdf'  %}" download>
+           <button type="button" class="btn btn-secondary my-2">My CV</button>
+        </a>
+      </p>
+      <img src="{% static 'logo.png' %}" height=200>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-md-4 mb-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/polls.png" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Poll App</h5>
+            <p class="card-text">Add polls and answers them.</p>
+            <a href="{% url 'pollapp'  %}" class="btn btn-success">Go To App</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/social.jpg" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Social Networking</h5>
+            <p class="card-text">Small demo of social network.</p>
+            <a href="#" class="btn btn-success disabled" >Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/todo.jpg" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">To Do App</h5>
+            <p class="card-text">To Do list - Create and Delete tasks.</p>
+            <a href="{% url 'todoapp'  %}" class="btn btn-success">Go To App</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/car_selling.jpg" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Car Selling</h5>
+            <p class="card-text">Shop to buy and sell cars.</p>
+            <a href="#" class="btn btn-success disabled">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/car_selling.jpg" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Car Selling</h5>
+            <p class="card-text">Shop to buy and sell cars.</p>
+            <a href="#" class="btn btn-success disabled">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mt-4">
+        <div class="card" style="width: 20rem;">
+          <div class="inner">
+            <img src="media/images/car_selling.jpg" class="card-img-top">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Car Selling</h5>
+            <p class="card-text">Shop to buy and sell cars.</p>
+            <a href="#" class="btn btn-success disabled">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
+
+</html>
+
+
+
+
+

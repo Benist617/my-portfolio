@@ -1,0 +1,58 @@
+{% extends "pollapp/base.html" %}
+{% load widget_tweaks %}
+
+{% block title %}Create Poll{% endblock %}
+
+{% block main %}
+
+    <div class="card">
+        <div class="card-header">
+            <h5> Create A New Poll</h5>
+        </div>
+       <form method="POST">
+           {% csrf_token %}
+           <div class="card-body">
+             <!- first row + second row  - 4 row ->
+             <div class="row">
+               <div class="col-12">
+                 <div class="form-group">
+                   <label>Enter a poll question</label>
+                   {% render_field form.question class="form-control" rows="3" %}
+                 </div>
+               </div>
+             </div>
+             <!- 3 option solutions - 1 row ->
+             <div class="row">
+               <div class="col-4">
+                 <div class="form-group">
+                   <label>Option 1</label>
+                   {% render_field form.option_one class="form-control" %}
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="form-group">
+                   <label>Option 2</label>
+                   {% render_field form.option_two class="form-control" %}
+                 </div>
+               </div>
+               <div class="col-4">
+                 <div class="form-group">
+                   <label>Option 3</label>
+                   {% render_field form.option_three class="form-control" %}
+                 </div>
+               </div>
+             </div>
+             <!- submit button - 1 row ->
+             <div class="row">
+               <div class="col-12">
+                 <button type="submit" class="btn btn-info" >Submit</button>
+               </div>
+             </div>
+           </div>
+       </form>
+    </div>
+
+{% endblock %}
+
+
+

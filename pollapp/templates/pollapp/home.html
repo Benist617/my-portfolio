@@ -1,0 +1,27 @@
+<!-- home.html -->
+{% extends "pollapp/base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block main %}
+
+    <div class="card">
+        <div class="card-header">
+            <h4> Available Polls</h4>
+        </div>
+        <div class="card-body ">
+            <div class="row">
+                <li class="list-group">
+                    {% for item in all_items %}
+                        <li class="list-group-item  border-button-0 border-right-0 border-top-2 border-left-0 col-12">
+                            <div class="form-inline">
+                                <h5 class="col-lg-10 col-sm-8 "> {{item.question}}</h5>
+                                <a href="{% url 'vote' item.id %}" class="btn btn-info mr-1 btn-sm active" role="button">Vote</a>
+                                <a href="{% url 'results' item.id %}" class="btn btn-secondary ml-3 btn-sm active" role="button">View Results</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </li>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
